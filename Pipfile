@@ -7,7 +7,7 @@ verify_ssl = true
 django-extensions = "*"
 
 [packages]
-django = "==3.0.2"
+django = "==3.0.3"
 django-model-utils = "==4.0.0"
 pillow = "*"
 
