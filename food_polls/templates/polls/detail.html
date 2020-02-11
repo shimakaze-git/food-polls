@@ -1,0 +1,16 @@
+<h1>{{ product.name }}</h1>
+
+<p>{{ product }}</p>
+<p>{{ product.image }}</p>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<form action="/polls/{{ product.id }}/" method="post">
+{% csrf_token %}
+{% comment %} {% for choice in question.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+{% endfor %} {% endcomment %}
+<input type="submit" value="Vote">
+</form>
