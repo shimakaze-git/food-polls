@@ -1,0 +1,5 @@
+[flake8]
+max-line-length=120
+max-complexity=10
+exclude=*/migrations/*,__init__.py
+ignore=E221 */factories/*,E241,F405,W503,D413,D100
